@@ -1,0 +1,23 @@
+
+server:
+  port: 8080
+  servlet:
+      context-path: /
+
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 0
+    static-path-pattern: /static/**
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      static-locations: classpath:/static/
+  freemarker:
+    templateLoaderPath: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+    request-context-attribute: request
+    settings:
+      number_format: 0.##########
+      new_builtin_class_resolver: safer
